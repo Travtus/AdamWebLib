@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.travtusworks.adam" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+
+        <activity android:name=".AdamActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialog"
+            android:windowSoftInputMode="adjustPan"/>
+
+    </application>
+
+</manifest>
