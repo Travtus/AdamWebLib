@@ -40,7 +40,7 @@ public class AdamButton extends FloatingActionButton {
 
                 Log.i(TAG,"the ADAM button was clicked");
 
-                Intent intent = new Intent(context, AdamActivity.class);
+                Intent intent = new Intent(context, com.travtusworks.adam.AdamActivity.class);
                 context.startActivity(intent);
 
             }
