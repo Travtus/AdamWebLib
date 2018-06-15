@@ -1,0 +1,38 @@
+
+This document is created to prevent spending time finding answers
+for questions that were already solved.
+Have fun !!!
+
+-------
+
+1. How to generate the adam.arr file?
+
+View -> Tool Windows -> Gradle -> build -> assemble
+
+--------
+
+2. How the user should use this library?
+
+- import the aar in the libs folder
+- in build.gradle should be added the following lines
+
+    compile(name: "adam-debug", ext: "aar")
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+- and then simply add the button in the layout
+
+    <com.travtusworks.adam.AdamButton
+            android:id="@+id/adam_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:padding="10dp"/>
+
+That's it !!!
