@@ -9,7 +9,7 @@
         <activity android:name=".AdamActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyDialog"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustResize"/>
 
     </application>
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="travtusColor">#00ADEF</color>
     <color name="white_color">#ffffff</color>
 
 </resources>
