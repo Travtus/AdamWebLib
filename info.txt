@@ -35,4 +35,7 @@ View -> Tool Windows -> Gradle -> build -> assemble
             android:layout_margin="8dp"
             android:padding="10dp"/>
 
+    In order to specify the companyID: adamButton.setCompanyId(1);
+    If this is not specified the default value will be 30.
+
 That's it !!!

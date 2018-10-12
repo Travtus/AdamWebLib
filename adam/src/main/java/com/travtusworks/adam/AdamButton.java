@@ -17,6 +17,8 @@ import android.view.View;
 public class AdamButton extends FloatingActionButton {
 
     private static final String TAG = "AdamButton";
+    public static String EXTRA_COMPANY_ID = "company_id";
+    private int companyId = 0;
 
     public AdamButton(Context context) {
         super(context);
@@ -41,10 +43,16 @@ public class AdamButton extends FloatingActionButton {
                 Log.i(TAG,"the ADAM button was clicked");
 
                 Intent intent = new Intent(context, com.travtusworks.adam.AdamActivity.class);
+                if (companyId != 0)
+                    intent.putExtra(EXTRA_COMPANY_ID, companyId);
                 context.startActivity(intent);
 
             }
         });
+    }
+
+    public void setCompanyId(int companyId){
+        this.companyId = companyId;
     }
 
     public AdamButton(Context context, AttributeSet attrs, int defStyleAttr) {

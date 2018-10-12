@@ -3,6 +3,7 @@ package com.travtusworks.adam;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -31,7 +32,14 @@ public class AdamActivity extends AppCompatActivity{
         webView = findViewById(R.id.webview);
         progressBar = findViewById(R.id.progress_bar);
 
-        String url = "http://adamwidget.travtus.com/";
+        String url = "http://adamwidget.travtus.com";
+        if (getIntent().getExtras() != null) {
+            int companyID = getIntent().getExtras().getInt(AdamButton.EXTRA_COMPANY_ID, 0);
+            if (companyID != 0)
+                url = url + "?companyId=" + companyID;
+        }
+
+        Log.i(TAG,"url = " + url);
 
         webView.setWebViewClient(new InnerWebViewClient());
         webView.loadUrl(url);
